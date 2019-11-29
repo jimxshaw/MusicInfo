@@ -1,3 +1,5 @@
+import { combineReducers } from "redux";
+
 // Reducers
 const songsReducer = () => {
   return [
@@ -15,3 +17,10 @@ const selectedSongReducer = (selectedSong = null, action) => {
 
   return selectedSong;
 };
+
+// The keys here are what will show up as keys
+// inside our state object.
+export default combineReducers({
+  songs: songsReducer,
+  selectedSong: selectedSongReducer
+});
