@@ -1,4 +1,5 @@
 import React from "react";
+import { connect } from "react-redux";
 
 class SongList extends React.Component {
   render() {
@@ -6,4 +7,7 @@ class SongList extends React.Component {
   }
 }
 
-export default SongList;
+// The connect function returns a function.
+// The returned function is invoked by taking
+// in the SongList as its argument.
+export default connect()(SongList);
