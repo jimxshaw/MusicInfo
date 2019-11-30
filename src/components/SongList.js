@@ -30,7 +30,7 @@ class SongList extends React.Component {
 // Take state object and the data it contains
 // and have it show up as props inside of the component.
 const mapStateToProps = state => {
-  console.log(state);
+  //console.log(state);
   return { songs: state.songs };
 };
 
@@ -39,6 +39,8 @@ const mapStateToProps = state => {
 // and an object that holds action creators.
 // This action creator will be available in
 // this component as props.
+// The Redux Store's dispatch function is automatically
+// called with the action(s) passed into connect.
 // Connect's returned function is invoked by taking
 // in the SongList as its argument.
 export default connect(mapStateToProps, {
